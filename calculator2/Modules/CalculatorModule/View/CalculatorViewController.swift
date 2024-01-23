@@ -7,6 +7,15 @@
 
 import UIKit
 
+extension Double {
+    var string: String {
+        if self > Double(Int(self)) {
+            return String(self)
+        }
+        return String(Int(self))
+    }
+}
+
 protocol CalculatorViewProtocol: AnyObject {
     func updateDescriptionText(_ text: String)
     func updateResultText(_ text: String)
@@ -19,28 +28,73 @@ protocol CalculatorViewProtocol: AnyObject {
 class CalculatorViewController: UIViewController, CalculatorViewProtocol {
     func clearDescriptionText() {
         descriptionText.text = ""
+        realDecriptionText = ""
     }
 
     func removeLastCharacterFromDescriptionText() {
         if var descriptionText = descriptionText.text, !descriptionText.isEmpty {
             descriptionText.removeLast()
-            updateDescriptionText(descriptionText)
+            realDecriptionText.removeLast()
+            updateDescriptionText(realDecriptionText)
         }
     }
 
     func appendToDescriptionText(_ text: String) {
-        if var currentText = descriptionText.text {
-            currentText += text
-            updateDescriptionText(currentText)
-        }
+        realDecriptionText += text
+        updateDescriptionText(realDecriptionText)
     }
 
     func getDescriptionText() -> String? {
-        return descriptionText.text
+        return realDecriptionText
     }
 
     func updateDescriptionText(_ text: String) {
-        descriptionText.text = text
+        realDecriptionText = text
+        var newText = replacePowerNotation(text)
+        descriptionText.text = newText.replacingOccurrences(of: "^", with: "")
+    }
+
+    func replacePowerNotation(_ expression: String) -> String {
+        do {
+            let regex = try NSRegularExpression(pattern: "(\\d+)\\^(\\d+)", options: .caseInsensitive)
+
+            let range = NSRange(location: 0, length: expression.utf16.count)
+            var result = expression
+            regex.enumerateMatches(in: expression, options: [], range: range) { match, _, _ in
+                guard let matchRange = match?.range else { return }
+
+                let substring = (expression as NSString).substring(with: matchRange)
+                let components = substring.components(separatedBy: "^")
+
+                if components.count == 2, let base = Double(components[0]), let exponent = Double(components[1]) {
+                    let replacement = "\(base.string)\(superscriptDigits(for: String(exponent.string)))"
+                    result = result.replacingOccurrences(of: substring, with: replacement)
+                }
+            }
+
+            return result
+        } catch {
+            print("Regex error: \(error.localizedDescription)")
+            return expression
+        }
+    }
+
+    func superscriptDigits(for number: String) -> String {
+        let superscriptDigits: [Character: String] = [
+            "0": "⁰",
+            "1": "¹",
+            "2": "²",
+            "3": "³",
+            "4": "⁴",
+            "5": "⁵",
+            "6": "⁶",
+            "7": "⁷",
+            "8": "⁸",
+            "9": "⁹",
+        ]
+
+        let superscriptedNumber = number.map { superscriptDigits[$0] ?? String($0) }.joined()
+        return superscriptedNumber
     }
 
     func updateResultText(_ text: String) {
@@ -79,140 +133,32 @@ class CalculatorViewController: UIViewController, CalculatorViewProtocol {
     @IBOutlet var descriptionText: UILabel!
     @IBOutlet var resultText: UILabel!
 
+    var realDecriptionText = ""
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        setTarget(clearButton, #selector(clearButtonTapped))
-        setTarget(removeButton, #selector(removeButtonTapped))
-        setTarget(clearButton, #selector(clearButtonTapped))
-        setTarget(removeButton, #selector(removeButtonTapped))
-        setTarget(modButton, #selector(modButtonTapped))
-        setTarget(pharantessOpenButton, #selector(parenthesesOpenButtonTapped))
-        setTarget(pharantessCloseButton, #selector(parenthesesCloseButtonTapped))
-        setTarget(roundButton, #selector(roundButtonTapped))
-        setTarget(rootButton, #selector(rootButtonTapped))
-        setTarget(factorialButton, #selector(factorialButtonTapped))
-        setTarget(piButton, #selector(piButtonTapped))
-        setTarget(plusButton, #selector(plusButtonTapped))
-        setTarget(minusButton, #selector(minusButtonTapped))
-        setTarget(multiplyButton, #selector(multiplyButtonTapped))
-        setTarget(divideButton, #selector(divideButtonTapped))
-        setTarget(equalButton, #selector(equalButtonTapped))
-        setTarget(dotButton, #selector(dotButtonTapped))
-        setTarget(buttonNumber0, #selector(buttonNumber0Tapped))
-        setTarget(buttonNumber1, #selector(buttonNumber1Tapped))
-        setTarget(buttonNumber2, #selector(buttonNumber2Tapped))
-        setTarget(buttonNumber3, #selector(buttonNumber3Tapped))
-        setTarget(buttonNumber4, #selector(buttonNumber4Tapped))
-        setTarget(buttonNumber5, #selector(buttonNumber5Tapped))
-        setTarget(buttonNumber6, #selector(buttonNumber6Tapped))
-        setTarget(buttonNumber7, #selector(buttonNumber7Tapped))
-        setTarget(buttonNumber8, #selector(buttonNumber8Tapped))
-        setTarget(buttonNumber9, #selector(buttonNumber9Tapped))
     }
-
-    func setTarget(_ button: UIButton, _ selector: Selector) {
-        button.addTarget(self, action: selector, for: .touchUpInside)
+    
+    @IBAction func textButtonsTapped(_ sender:UIButton) {
+        guard let text = sender.titleLabel?.text else {return}
+        let newText = text.replacingOccurrences(of: "x", with: "")
+        
+        appendToDescriptionText(newText)
     }
-
-    @objc func clearButtonTapped() {
+    
+    @IBAction func equalButtonTapped(_ sender:UIButton) {
+        presenter.equalButtonTapped()
+    }
+    @IBAction func clearButtonTapped(_ sender:UIButton) {
         presenter.clearButtonTapped()
     }
-
-    @objc func removeButtonTapped() {
+    @IBAction func backButtonTapped(_ sender:UIButton) {
         presenter.removeButtonTapped()
     }
-
-    @objc func modButtonTapped() {
-        presenter.modButtonTapped()
-    }
-
-    @objc func parenthesesOpenButtonTapped() {
-        presenter.parenthesesOpenButtonTapped()
-    }
-
-    @objc func parenthesesCloseButtonTapped() {
-        presenter.parenthesesCloseButtonTapped()
-    }
-
-    @objc func roundButtonTapped() {
+    @IBAction func squareButtonTapped(_ sender:UIButton) {
         presenter.roundButtonTapped()
     }
 
-    @objc func rootButtonTapped() {
-        presenter.rootButtonTapped()
-    }
-
-    @objc func factorialButtonTapped() {
-        presenter.factorialButtonTapped()
-    }
-
-    @objc func piButtonTapped() {
-        presenter.piButtonTapped()
-    }
-
-    @objc func plusButtonTapped() {
-        presenter.plusButtonTapped()
-    }
-
-    @objc func minusButtonTapped() {
-        presenter.minusButtonTapped()
-    }
-
-    @objc func multiplyButtonTapped() {
-        presenter.multiplyButtonTapped()
-    }
-
-    @objc func divideButtonTapped() {
-        presenter.divideButtonTapped()
-    }
-
-    @objc func equalButtonTapped() {
-        presenter.equalButtonTapped()
-    }
-
-    @objc func dotButtonTapped() {
-        presenter.dotButtonTapped()
-    }
-
-    @objc func buttonNumber0Tapped() {
-        presenter.buttonNumber0Tapped()
-    }
-
-    @objc func buttonNumber1Tapped() {
-        presenter.buttonNumber1Tapped()
-    }
-
-    @objc func buttonNumber2Tapped() {
-        presenter.buttonNumber2Tapped()
-    }
-
-    @objc func buttonNumber3Tapped() {
-        presenter.buttonNumber3Tapped()
-    }
-
-    @objc func buttonNumber4Tapped() {
-        presenter.buttonNumber4Tapped()
-    }
-
-    @objc func buttonNumber5Tapped() {
-        presenter.buttonNumber5Tapped()
-    }
-
-    @objc func buttonNumber6Tapped() {
-        presenter.buttonNumber6Tapped()
-    }
-
-    @objc func buttonNumber7Tapped() {
-        presenter.buttonNumber7Tapped()
-    }
-
-    @objc func buttonNumber8Tapped() {
-        presenter.buttonNumber8Tapped()
-    }
-
-    @objc func buttonNumber9Tapped() {
-        presenter.buttonNumber9Tapped()
-    }
 }
 
 func evaluateMathExpression(_ expression: String) -> Double? {
@@ -226,7 +172,6 @@ func evaluateMathExpression(_ expression: String) -> Double? {
     }
 }
 
-// button yuvarlaklığı
 @IBDesignable class CircleButton: UIButton {
     override func layoutSubviews() {
         super.layoutSubviews()

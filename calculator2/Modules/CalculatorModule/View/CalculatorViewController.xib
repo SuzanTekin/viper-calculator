@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <accessibilityOverrides dynamicTypePreference="3"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -89,6 +89,9 @@
                                                     <buttonConfiguration key="configuration" style="plain" title="C">
                                                         <fontDescription key="titleFontDescription" type="boldSystem" pointSize="24"/>
                                                     </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="clearButtonTapped:" destination="-1" eventType="touchUpInside" id="teL-X9-leA"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VNr-kH-fe6" customClass="CircleButton" customModule="calculator2" customModuleProvider="target">
                                                     <rect key="frame" x="73" y="0.0" width="61" height="61"/>
@@ -102,6 +105,9 @@
                                                         <imageReference key="image" image="arrow.left" catalog="system" symbolScale="large" variableValue="1"/>
                                                         <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" weight="bold"/>
                                                     </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="backButtonTapped:" destination="-1" eventType="touchUpInside" id="rFb-kb-eQR"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VPm-tH-ZTG" customClass="CircleButton" customModule="calculator2" customModuleProvider="target">
                                                     <rect key="frame" x="146" y="0.0" width="61" height="61"/>
@@ -114,6 +120,9 @@
                                                     <buttonConfiguration key="configuration" style="plain" title="%">
                                                         <fontDescription key="titleFontDescription" type="boldSystem" pointSize="24"/>
                                                     </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="textButtonsTapped:" destination="-1" eventType="touchUpInside" id="gmy-EC-IS1"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D9b-h1-b8q" customClass="CircleButton" customModule="calculator2" customModuleProvider="target">
                                                     <rect key="frame" x="219" y="0.0" width="61" height="61"/>
@@ -126,6 +135,9 @@
                                                     <buttonConfiguration key="configuration" style="plain" title="( ">
                                                         <fontDescription key="titleFontDescription" type="boldSystem" pointSize="24"/>
                                                     </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="textButtonsTapped:" destination="-1" eventType="touchUpInside" id="36I-8h-t9B"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z5H-by-7t1" customClass="CircleButton" customModule="calculator2" customModuleProvider="target">
                                                     <rect key="frame" x="292" y="0.0" width="61" height="61"/>
@@ -138,6 +150,9 @@
                                                     <buttonConfiguration key="configuration" style="plain" title=")">
                                                         <fontDescription key="titleFontDescription" type="boldSystem" pointSize="24"/>
                                                     </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="textButtonsTapped:" destination="-1" eventType="touchUpInside" id="iDZ-tF-5lU"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </stackView>
@@ -155,6 +170,9 @@
                                                     <buttonConfiguration key="configuration" style="plain" title="xʸ">
                                                         <fontDescription key="titleFontDescription" type="boldSystem" pointSize="24"/>
                                                     </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="squareButtonTapped:" destination="-1" eventType="touchUpInside" id="43K-Tw-WOG"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="edH-OT-w5f" customClass="CircleButton" customModule="calculator2" customModuleProvider="target">
                                                     <rect key="frame" x="73" y="0.0" width="61" height="61"/>
@@ -167,6 +185,9 @@
                                                     <buttonConfiguration key="configuration" style="plain" title="7">
                                                         <fontDescription key="titleFontDescription" type="boldSystem" pointSize="24"/>
                                                     </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="textButtonsTapped:" destination="-1" eventType="touchUpInside" id="SFl-Q1-QPt"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S9i-Jp-MQ5" customClass="CircleButton" customModule="calculator2" customModuleProvider="target">
                                                     <rect key="frame" x="146" y="0.0" width="61" height="61"/>
@@ -179,6 +200,9 @@
                                                     <buttonConfiguration key="configuration" style="plain" title="8">
                                                         <fontDescription key="titleFontDescription" type="boldSystem" pointSize="24"/>
                                                     </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="textButtonsTapped:" destination="-1" eventType="touchUpInside" id="fuv-8a-ui5"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gD8-xv-6HZ" customClass="CircleButton" customModule="calculator2" customModuleProvider="target">
                                                     <rect key="frame" x="219" y="0.0" width="61" height="61"/>
@@ -191,6 +215,9 @@
                                                     <buttonConfiguration key="configuration" style="plain" title="9">
                                                         <fontDescription key="titleFontDescription" type="boldSystem" pointSize="24"/>
                                                     </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="textButtonsTapped:" destination="-1" eventType="touchUpInside" id="aZ3-dT-hQU"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g0D-ak-pkf" customClass="CircleButton" customModule="calculator2" customModuleProvider="target">
                                                     <rect key="frame" x="292" y="0.0" width="61" height="61"/>
@@ -203,6 +230,9 @@
                                                     <buttonConfiguration key="configuration" style="plain" title="+">
                                                         <fontDescription key="titleFontDescription" type="boldSystem" pointSize="24"/>
                                                     </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="textButtonsTapped:" destination="-1" eventType="touchUpInside" id="Yiq-M8-dMo"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </stackView>
@@ -217,9 +247,12 @@
                                                     </constraints>
                                                     <color key="tintColor" systemColor="groupTableViewBackgroundColor"/>
                                                     <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="plain" title="ʸ√x">
+                                                    <buttonConfiguration key="configuration" style="plain" title="√x">
                                                         <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
                                                     </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="textButtonsTapped:" destination="-1" eventType="touchUpInside" id="fg6-In-W1P"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wPo-Ss-Smz" customClass="CircleButton" customModule="calculator2" customModuleProvider="target">
                                                     <rect key="frame" x="73" y="0.0" width="61" height="61"/>
@@ -232,6 +265,9 @@
                                                     <buttonConfiguration key="configuration" style="plain" title="4">
                                                         <fontDescription key="titleFontDescription" type="boldSystem" pointSize="24"/>
                                                     </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="textButtonsTapped:" destination="-1" eventType="touchUpInside" id="m9J-4u-B0m"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0xX-jx-3fg" customClass="CircleButton" customModule="calculator2" customModuleProvider="target">
                                                     <rect key="frame" x="146" y="0.0" width="61" height="61"/>
@@ -244,6 +280,9 @@
                                                     <buttonConfiguration key="configuration" style="plain" title="5">
                                                         <fontDescription key="titleFontDescription" type="boldSystem" pointSize="24"/>
                                                     </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="textButtonsTapped:" destination="-1" eventType="touchUpInside" id="a4p-te-v1M"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2xy-5b-wz1" customClass="CircleButton" customModule="calculator2" customModuleProvider="target">
                                                     <rect key="frame" x="219" y="0.0" width="61" height="61"/>
@@ -256,6 +295,9 @@
                                                     <buttonConfiguration key="configuration" style="plain" title="6">
                                                         <fontDescription key="titleFontDescription" type="boldSystem" pointSize="24"/>
                                                     </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="textButtonsTapped:" destination="-1" eventType="touchUpInside" id="JHA-S6-GYe"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t8h-OW-vbk" customClass="CircleButton" customModule="calculator2" customModuleProvider="target">
                                                     <rect key="frame" x="292" y="0.0" width="61" height="61"/>
@@ -268,6 +310,9 @@
                                                     <buttonConfiguration key="configuration" style="plain" title="−">
                                                         <fontDescription key="titleFontDescription" type="boldSystem" pointSize="24"/>
                                                     </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="textButtonsTapped:" destination="-1" eventType="touchUpInside" id="ieq-za-YNv"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </stackView>
@@ -285,6 +330,9 @@
                                                     <buttonConfiguration key="configuration" style="plain" title="x!">
                                                         <fontDescription key="titleFontDescription" type="boldSystem" pointSize="24"/>
                                                     </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="textButtonsTapped:" destination="-1" eventType="touchUpInside" id="J18-WG-yAA"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rhw-j5-fyx" customClass="CircleButton" customModule="calculator2" customModuleProvider="target">
                                                     <rect key="frame" x="73" y="0.0" width="61" height="61"/>
@@ -297,6 +345,9 @@
                                                     <buttonConfiguration key="configuration" style="plain" title="1">
                                                         <fontDescription key="titleFontDescription" type="boldSystem" pointSize="24"/>
                                                     </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="textButtonsTapped:" destination="-1" eventType="touchUpInside" id="eQZ-6c-uO9"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YIT-vt-Ozl" customClass="CircleButton" customModule="calculator2" customModuleProvider="target">
                                                     <rect key="frame" x="146" y="0.0" width="61" height="61"/>
@@ -309,6 +360,9 @@
                                                     <buttonConfiguration key="configuration" style="plain" title="2">
                                                         <fontDescription key="titleFontDescription" type="boldSystem" pointSize="24"/>
                                                     </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="textButtonsTapped:" destination="-1" eventType="touchUpInside" id="nyb-8r-AX2"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qiV-hW-bU7" customClass="CircleButton" customModule="calculator2" customModuleProvider="target">
                                                     <rect key="frame" x="219" y="0.0" width="61" height="61"/>
@@ -321,6 +375,9 @@
                                                     <buttonConfiguration key="configuration" style="plain" title="3">
                                                         <fontDescription key="titleFontDescription" type="boldSystem" pointSize="24"/>
                                                     </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="textButtonsTapped:" destination="-1" eventType="touchUpInside" id="zkB-8a-n9O"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0l1-eL-ZyP" customClass="CircleButton" customModule="calculator2" customModuleProvider="target">
                                                     <rect key="frame" x="292" y="0.0" width="61" height="61"/>
@@ -333,6 +390,9 @@
                                                     <buttonConfiguration key="configuration" style="plain" title="×" titleAlignment="center">
                                                         <fontDescription key="titleFontDescription" type="boldSystem" pointSize="24"/>
                                                     </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="textButtonsTapped:" destination="-1" eventType="touchUpInside" id="Rhq-a4-odd"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </stackView>
@@ -350,6 +410,9 @@
                                                     <buttonConfiguration key="configuration" style="plain" title="π">
                                                         <fontDescription key="titleFontDescription" type="boldSystem" pointSize="24"/>
                                                     </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="textButtonsTapped:" destination="-1" eventType="touchUpInside" id="PI6-xF-9rX"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ATS-Zd-pT9" customClass="CircleButton" customModule="calculator2" customModuleProvider="target">
                                                     <rect key="frame" x="73" y="0.0" width="61" height="61"/>
@@ -362,6 +425,9 @@
                                                     <buttonConfiguration key="configuration" style="plain" title=".">
                                                         <fontDescription key="titleFontDescription" type="boldSystem" pointSize="24"/>
                                                     </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="textButtonsTapped:" destination="-1" eventType="touchUpInside" id="QDs-qR-Z3b"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IQb-cd-oeb" customClass="CircleButton" customModule="calculator2" customModuleProvider="target">
                                                     <rect key="frame" x="146" y="0.0" width="61" height="61"/>
@@ -374,6 +440,9 @@
                                                     <buttonConfiguration key="configuration" style="plain" title="0">
                                                         <fontDescription key="titleFontDescription" type="boldSystem" pointSize="24"/>
                                                     </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="textButtonsTapped:" destination="-1" eventType="touchUpInside" id="ZNa-wR-p16"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C8a-bp-k9M" customClass="CircleButton" customModule="calculator2" customModuleProvider="target">
                                                     <rect key="frame" x="219" y="0.0" width="61" height="61"/>
@@ -386,6 +455,9 @@
                                                     <buttonConfiguration key="configuration" style="plain" title="=">
                                                         <fontDescription key="titleFontDescription" type="boldSystem" pointSize="24"/>
                                                     </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="equalButtonTapped:" destination="-1" eventType="touchUpInside" id="AcY-Nw-rOn"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GLw-bz-Jzm" customClass="CircleButton" customModule="calculator2" customModuleProvider="target">
                                                     <rect key="frame" x="292" y="0.0" width="61" height="61"/>
@@ -398,6 +470,9 @@
                                                     <buttonConfiguration key="configuration" style="plain" title="÷">
                                                         <fontDescription key="titleFontDescription" type="boldSystem" pointSize="24"/>
                                                     </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="textButtonsTapped:" destination="-1" eventType="touchUpInside" id="Rpt-4Z-WW3"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </stackView>
@@ -475,7 +550,7 @@
             <size key="intrinsicContentSize" width="40" height="42.666666666666664"/>
         </designable>
         <designable name="mec-uk-m2l">
-            <size key="intrinsicContentSize" width="57" height="38"/>
+            <size key="intrinsicContentSize" width="49" height="38"/>
         </designable>
         <designable name="q2V-CI-WkU">
             <size key="intrinsicContentSize" width="45" height="42.666666666666664"/>
