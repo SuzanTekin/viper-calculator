@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <accessibilityOverrides dynamicTypePreference="3"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CalculatorViewController" customModule="calculator2" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="DJh-hU-Xsj">
+                    <rect key="frame" x="20" y="71" width="353" height="735"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="QYa-KT-rmx">
+                            <rect key="frame" x="0.0" y="306" width="353" height="429"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iBc-ir-tTU">
+                                    <rect key="frame" x="0.0" y="0.0" width="353" height="24"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="24" id="sot-FA-Spk"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4HD-2i-zXy">
+                                    <rect key="frame" x="0.0" y="36" width="353" height="28"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="28" id="HiD-hA-6ye"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="98e-q0-J2y">
+                                    <rect key="frame" x="0.0" y="76" width="353" height="353"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="eKf-Dg-JWB">
+                                            <rect key="frame" x="0.0" y="0.0" width="353" height="61"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tn5-Vz-CmF" customClass="CircleButton" customModule="calculator2" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="61" height="61"/>
+                                                    <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="tn5-Vz-CmF" secondAttribute="height" multiplier="1:1" id="mmI-Kc-hd8"/>
+                                                    </constraints>
+                                                    <color key="tintColor" systemColor="groupTableViewBackgroundColor"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" title="C">
+                                                        <fontDescription key="titleFontDescription" type="boldSystem" pointSize="24"/>
+                                                    </buttonConfiguration>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VNr-kH-fe6" customClass="CircleButton" customModule="calculator2" customModuleProvider="target">
+                                                    <rect key="frame" x="73" y="0.0" width="61" height="61"/>
+                                                    <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="VNr-kH-fe6" secondAttribute="height" multiplier="1:1" id="AdH-18-lTp"/>
+                                                    </constraints>
+                                                    <color key="tintColor" systemColor="groupTableViewBackgroundColor"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain">
+                                                        <imageReference key="image" image="arrow.left" catalog="system" symbolScale="large" variableValue="1"/>
+                                                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" weight="bold"/>
+                                                    </buttonConfiguration>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VPm-tH-ZTG" customClass="CircleButton" customModule="calculator2" customModuleProvider="target">
+                                                    <rect key="frame" x="146" y="0.0" width="61" height="61"/>
+                                                    <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="VPm-tH-ZTG" secondAttribute="height" multiplier="1:1" id="zfw-IG-7AZ"/>
+                                                    </constraints>
+                                                    <color key="tintColor" systemColor="groupTableViewBackgroundColor"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" title="%">
+                                                        <fontDescription key="titleFontDescription" type="boldSystem" pointSize="24"/>
+                                                    </buttonConfiguration>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D9b-h1-b8q" customClass="CircleButton" customModule="calculator2" customModuleProvider="target">
+                                                    <rect key="frame" x="219" y="0.0" width="61" height="61"/>
+                                                    <color key="backgroundColor" systemColor="systemBrownColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="D9b-h1-b8q" secondAttribute="height" multiplier="1:1" id="W0E-kI-bhb"/>
+                                                    </constraints>
+                                                    <color key="tintColor" systemColor="groupTableViewBackgroundColor"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" title="( ">
+                                                        <fontDescription key="titleFontDescription" type="boldSystem" pointSize="24"/>
+                                                    </buttonConfiguration>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z5H-by-7t1" customClass="CircleButton" customModule="calculator2" customModuleProvider="target">
+                                                    <rect key="frame" x="292" y="0.0" width="61" height="61"/>
+                                                    <color key="backgroundColor" systemColor="systemBrownColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="Z5H-by-7t1" secondAttribute="height" multiplier="1:1" id="LN1-8O-YQW"/>
+                                                    </constraints>
+                                                    <color key="tintColor" systemColor="groupTableViewBackgroundColor"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" title=")">
+                                                        <fontDescription key="titleFontDescription" type="boldSystem" pointSize="24"/>
+                                                    </buttonConfiguration>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="gof-7U-Ei2">
+                                            <rect key="frame" x="0.0" y="73" width="353" height="61"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yob-cT-Tvb" customClass="CircleButton" customModule="calculator2" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="61" height="61"/>
+                                                    <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="yob-cT-Tvb" secondAttribute="height" multiplier="1:1" id="0hD-8S-Mkj"/>
+                                                    </constraints>
+                                                    <color key="tintColor" systemColor="groupTableViewBackgroundColor"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" title="xʸ">
+                                                        <fontDescription key="titleFontDescription" type="boldSystem" pointSize="24"/>
+                                                    </buttonConfiguration>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="edH-OT-w5f" customClass="CircleButton" customModule="calculator2" customModuleProvider="target">
+                                                    <rect key="frame" x="73" y="0.0" width="61" height="61"/>
+                                                    <color key="backgroundColor" name="NumberBackground"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="edH-OT-w5f" secondAttribute="height" multiplier="1:1" id="uaF-Ok-ifS"/>
+                                                    </constraints>
+                                                    <color key="tintColor" systemColor="groupTableViewBackgroundColor"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" title="7">
+                                                        <fontDescription key="titleFontDescription" type="boldSystem" pointSize="24"/>
+                                                    </buttonConfiguration>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S9i-Jp-MQ5" customClass="CircleButton" customModule="calculator2" customModuleProvider="target">
+                                                    <rect key="frame" x="146" y="0.0" width="61" height="61"/>
+                                                    <color key="backgroundColor" name="NumberBackground"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="S9i-Jp-MQ5" secondAttribute="height" multiplier="1:1" id="RFZ-86-1m8"/>
+                                                    </constraints>
+                                                    <color key="tintColor" systemColor="groupTableViewBackgroundColor"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" title="8">
+                                                        <fontDescription key="titleFontDescription" type="boldSystem" pointSize="24"/>
+                                                    </buttonConfiguration>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gD8-xv-6HZ" customClass="CircleButton" customModule="calculator2" customModuleProvider="target">
+                                                    <rect key="frame" x="219" y="0.0" width="61" height="61"/>
+                                                    <color key="backgroundColor" name="NumberBackground"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="gD8-xv-6HZ" secondAttribute="height" multiplier="1:1" id="EfJ-OR-d7c"/>
+                                                    </constraints>
+                                                    <color key="tintColor" systemColor="groupTableViewBackgroundColor"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" title="9">
+                                                        <fontDescription key="titleFontDescription" type="boldSystem" pointSize="24"/>
+                                                    </buttonConfiguration>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g0D-ak-pkf" customClass="CircleButton" customModule="calculator2" customModuleProvider="target">
+                                                    <rect key="frame" x="292" y="0.0" width="61" height="61"/>
+                                                    <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="g0D-ak-pkf" secondAttribute="height" multiplier="1:1" id="Mkb-pr-eGq"/>
+                                                    </constraints>
+                                                    <color key="tintColor" systemColor="groupTableViewBackgroundColor"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" title="+">
+                                                        <fontDescription key="titleFontDescription" type="boldSystem" pointSize="24"/>
+                                                    </buttonConfiguration>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="vvm-75-4oM">
+                                            <rect key="frame" x="0.0" y="146" width="353" height="61"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mec-uk-m2l" customClass="CircleButton" customModule="calculator2" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="61" height="61"/>
+                                                    <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="mec-uk-m2l" secondAttribute="height" multiplier="1:1" id="at5-To-cxC"/>
+                                                    </constraints>
+                                                    <color key="tintColor" systemColor="groupTableViewBackgroundColor"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" title="ʸ√x">
+                                                        <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
+                                                    </buttonConfiguration>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wPo-Ss-Smz" customClass="CircleButton" customModule="calculator2" customModuleProvider="target">
+                                                    <rect key="frame" x="73" y="0.0" width="61" height="61"/>
+                                                    <color key="backgroundColor" name="NumberBackground"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="wPo-Ss-Smz" secondAttribute="height" multiplier="1:1" id="bFd-Yp-EbV"/>
+                                                    </constraints>
+                                                    <color key="tintColor" systemColor="groupTableViewBackgroundColor"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" title="4">
+                                                        <fontDescription key="titleFontDescription" type="boldSystem" pointSize="24"/>
+                                                    </buttonConfiguration>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0xX-jx-3fg" customClass="CircleButton" customModule="calculator2" customModuleProvider="target">
+                                                    <rect key="frame" x="146" y="0.0" width="61" height="61"/>
+                                                    <color key="backgroundColor" name="NumberBackground"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="0xX-jx-3fg" secondAttribute="height" multiplier="1:1" id="kUX-OA-VKY"/>
+                                                    </constraints>
+                                                    <color key="tintColor" systemColor="groupTableViewBackgroundColor"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" title="5">
+                                                        <fontDescription key="titleFontDescription" type="boldSystem" pointSize="24"/>
+                                                    </buttonConfiguration>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2xy-5b-wz1" customClass="CircleButton" customModule="calculator2" customModuleProvider="target">
+                                                    <rect key="frame" x="219" y="0.0" width="61" height="61"/>
+                                                    <color key="backgroundColor" name="NumberBackground"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="2xy-5b-wz1" secondAttribute="height" multiplier="1:1" id="uYe-wr-FcI"/>
+                                                    </constraints>
+                                                    <color key="tintColor" systemColor="groupTableViewBackgroundColor"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" title="6">
+                                                        <fontDescription key="titleFontDescription" type="boldSystem" pointSize="24"/>
+                                                    </buttonConfiguration>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t8h-OW-vbk" customClass="CircleButton" customModule="calculator2" customModuleProvider="target">
+                                                    <rect key="frame" x="292" y="0.0" width="61" height="61"/>
+                                                    <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="t8h-OW-vbk" secondAttribute="height" multiplier="1:1" id="4pR-h9-WPa"/>
+                                                    </constraints>
+                                                    <color key="tintColor" systemColor="groupTableViewBackgroundColor"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" title="−">
+                                                        <fontDescription key="titleFontDescription" type="boldSystem" pointSize="24"/>
+                                                    </buttonConfiguration>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="YQO-VK-LkL">
+                                            <rect key="frame" x="0.0" y="219" width="353" height="61"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q2V-CI-WkU" customClass="CircleButton" customModule="calculator2" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="61" height="61"/>
+                                                    <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="q2V-CI-WkU" secondAttribute="height" multiplier="1:1" id="uWj-5R-1Uu"/>
+                                                    </constraints>
+                                                    <color key="tintColor" systemColor="groupTableViewBackgroundColor"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" title="x!">
+                                                        <fontDescription key="titleFontDescription" type="boldSystem" pointSize="24"/>
+                                                    </buttonConfiguration>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rhw-j5-fyx" customClass="CircleButton" customModule="calculator2" customModuleProvider="target">
+                                                    <rect key="frame" x="73" y="0.0" width="61" height="61"/>
+                                                    <color key="backgroundColor" name="NumberBackground"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="Rhw-j5-fyx" secondAttribute="height" multiplier="1:1" id="qUN-8d-dlN"/>
+                                                    </constraints>
+                                                    <color key="tintColor" systemColor="groupTableViewBackgroundColor"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" title="1">
+                                                        <fontDescription key="titleFontDescription" type="boldSystem" pointSize="24"/>
+                                                    </buttonConfiguration>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YIT-vt-Ozl" customClass="CircleButton" customModule="calculator2" customModuleProvider="target">
+                                                    <rect key="frame" x="146" y="0.0" width="61" height="61"/>
+                                                    <color key="backgroundColor" name="NumberBackground"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="YIT-vt-Ozl" secondAttribute="height" multiplier="1:1" id="MI9-cH-RJt"/>
+                                                    </constraints>
+                                                    <color key="tintColor" systemColor="groupTableViewBackgroundColor"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" title="2">
+                                                        <fontDescription key="titleFontDescription" type="boldSystem" pointSize="24"/>
+                                                    </buttonConfiguration>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qiV-hW-bU7" customClass="CircleButton" customModule="calculator2" customModuleProvider="target">
+                                                    <rect key="frame" x="219" y="0.0" width="61" height="61"/>
+                                                    <color key="backgroundColor" name="NumberBackground"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="qiV-hW-bU7" secondAttribute="height" multiplier="1:1" id="sIV-AT-BL7"/>
+                                                    </constraints>
+                                                    <color key="tintColor" systemColor="groupTableViewBackgroundColor"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" title="3">
+                                                        <fontDescription key="titleFontDescription" type="boldSystem" pointSize="24"/>
+                                                    </buttonConfiguration>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0l1-eL-ZyP" customClass="CircleButton" customModule="calculator2" customModuleProvider="target">
+                                                    <rect key="frame" x="292" y="0.0" width="61" height="61"/>
+                                                    <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="0l1-eL-ZyP" secondAttribute="height" multiplier="1:1" id="vNG-Pj-cfd"/>
+                                                    </constraints>
+                                                    <color key="tintColor" systemColor="groupTableViewBackgroundColor"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" title="×" titleAlignment="center">
+                                                        <fontDescription key="titleFontDescription" type="boldSystem" pointSize="24"/>
+                                                    </buttonConfiguration>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="rUi-sZ-N3g">
+                                            <rect key="frame" x="0.0" y="292" width="353" height="61"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eID-6k-ILZ" customClass="CircleButton" customModule="calculator2" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="61" height="61"/>
+                                                    <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="eID-6k-ILZ" secondAttribute="height" multiplier="1:1" id="dg2-lv-QTL"/>
+                                                    </constraints>
+                                                    <color key="tintColor" systemColor="groupTableViewBackgroundColor"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" title="π">
+                                                        <fontDescription key="titleFontDescription" type="boldSystem" pointSize="24"/>
+                                                    </buttonConfiguration>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ATS-Zd-pT9" customClass="CircleButton" customModule="calculator2" customModuleProvider="target">
+                                                    <rect key="frame" x="73" y="0.0" width="61" height="61"/>
+                                                    <color key="backgroundColor" name="NumberBackground"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="ATS-Zd-pT9" secondAttribute="height" multiplier="1:1" id="1Of-Y6-Vjc"/>
+                                                    </constraints>
+                                                    <color key="tintColor" systemColor="groupTableViewBackgroundColor"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" title=".">
+                                                        <fontDescription key="titleFontDescription" type="boldSystem" pointSize="24"/>
+                                                    </buttonConfiguration>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IQb-cd-oeb" customClass="CircleButton" customModule="calculator2" customModuleProvider="target">
+                                                    <rect key="frame" x="146" y="0.0" width="61" height="61"/>
+                                                    <color key="backgroundColor" name="NumberBackground"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="IQb-cd-oeb" secondAttribute="height" multiplier="1:1" id="Jb2-ab-htA"/>
+                                                    </constraints>
+                                                    <color key="tintColor" systemColor="groupTableViewBackgroundColor"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" title="0">
+                                                        <fontDescription key="titleFontDescription" type="boldSystem" pointSize="24"/>
+                                                    </buttonConfiguration>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C8a-bp-k9M" customClass="CircleButton" customModule="calculator2" customModuleProvider="target">
+                                                    <rect key="frame" x="219" y="0.0" width="61" height="61"/>
+                                                    <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="C8a-bp-k9M" secondAttribute="height" multiplier="1:1" id="zie-Rd-W2V"/>
+                                                    </constraints>
+                                                    <color key="tintColor" systemColor="groupTableViewBackgroundColor"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" title="=">
+                                                        <fontDescription key="titleFontDescription" type="boldSystem" pointSize="24"/>
+                                                    </buttonConfiguration>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GLw-bz-Jzm" customClass="CircleButton" customModule="calculator2" customModuleProvider="target">
+                                                    <rect key="frame" x="292" y="0.0" width="61" height="61"/>
+                                                    <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="GLw-bz-Jzm" secondAttribute="height" multiplier="1:1" id="9i8-k9-mbF"/>
+                                                    </constraints>
+                                                    <color key="tintColor" systemColor="groupTableViewBackgroundColor"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" title="÷">
+                                                        <fontDescription key="titleFontDescription" type="boldSystem" pointSize="24"/>
+                                                    </buttonConfiguration>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="DJh-hU-Xsj" secondAttribute="trailing" constant="20" id="2i8-ie-AOV"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="DJh-hU-Xsj" secondAttribute="bottom" constant="12" id="PR8-BE-Ute"/>
+                <constraint firstItem="DJh-hU-Xsj" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="flL-Kd-D3N"/>
+                <constraint firstItem="DJh-hU-Xsj" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="12" id="ums-UB-DeM"/>
+            </constraints>
+            <point key="canvasLocation" x="300" y="53"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="0l1-eL-ZyP">
+            <size key="intrinsicContentSize" width="40" height="42.666666666666664"/>
+        </designable>
+        <designable name="0xX-jx-3fg">
+            <size key="intrinsicContentSize" width="39.333333333333336" height="42.666666666666664"/>
+        </designable>
+        <designable name="2xy-5b-wz1">
+            <size key="intrinsicContentSize" width="40" height="42.666666666666664"/>
+        </designable>
+        <designable name="ATS-Zd-pT9">
+            <size key="intrinsicContentSize" width="30.333333333333332" height="42.666666666666664"/>
+        </designable>
+        <designable name="C8a-bp-k9M">
+            <size key="intrinsicContentSize" width="40" height="42.666666666666664"/>
+        </designable>
+        <designable name="D9b-h1-b8q">
+            <size key="intrinsicContentSize" width="38.666666666666664" height="42.666666666666664"/>
+        </designable>
+        <designable name="GLw-bz-Jzm">
+            <size key="intrinsicContentSize" width="40" height="42.666666666666664"/>
+        </designable>
+        <designable name="IQb-cd-oeb">
+            <size key="intrinsicContentSize" width="40" height="42.666666666666664"/>
+        </designable>
+        <designable name="Rhw-j5-fyx">
+            <size key="intrinsicContentSize" width="36" height="42.666666666666664"/>
+        </designable>
+        <designable name="S9i-Jp-MQ5">
+            <size key="intrinsicContentSize" width="40" height="42.666666666666664"/>
+        </designable>
+        <designable name="VNr-kH-fe6">
+            <size key="intrinsicContentSize" width="50" height="34.333333333333336"/>
+        </designable>
+        <designable name="VPm-tH-ZTG">
+            <size key="intrinsicContentSize" width="46.333333333333336" height="42.666666666666664"/>
+        </designable>
+        <designable name="YIT-vt-Ozl">
+            <size key="intrinsicContentSize" width="39" height="42.666666666666664"/>
+        </designable>
+        <designable name="Z5H-by-7t1">
+            <size key="intrinsicContentSize" width="33.666666666666664" height="42.666666666666664"/>
+        </designable>
+        <designable name="eID-6k-ILZ">
+            <size key="intrinsicContentSize" width="41.333333333333336" height="42.666666666666664"/>
+        </designable>
+        <designable name="edH-OT-w5f">
+            <size key="intrinsicContentSize" width="38" height="42.666666666666664"/>
+        </designable>
+        <designable name="g0D-ak-pkf">
+            <size key="intrinsicContentSize" width="40" height="42.666666666666664"/>
+        </designable>
+        <designable name="gD8-xv-6HZ">
+            <size key="intrinsicContentSize" width="40" height="42.666666666666664"/>
+        </designable>
+        <designable name="mec-uk-m2l">
+            <size key="intrinsicContentSize" width="57" height="38"/>
+        </designable>
+        <designable name="q2V-CI-WkU">
+            <size key="intrinsicContentSize" width="45" height="42.666666666666664"/>
+        </designable>
+        <designable name="qiV-hW-bU7">
+            <size key="intrinsicContentSize" width="39.666666666666664" height="42.666666666666664"/>
+        </designable>
+        <designable name="t8h-OW-vbk">
+            <size key="intrinsicContentSize" width="40" height="42.666666666666664"/>
+        </designable>
+        <designable name="tn5-Vz-CmF">
+            <size key="intrinsicContentSize" width="41.333333333333336" height="42.666666666666664"/>
+        </designable>
+        <designable name="wPo-Ss-Smz">
+            <size key="intrinsicContentSize" width="40" height="42.666666666666664"/>
+        </designable>
+        <designable name="yob-cT-Tvb">
+            <size key="intrinsicContentSize" width="46.333333333333336" height="42.666666666666664"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="arrow.left" catalog="system" width="128" height="95"/>
+        <namedColor name="NumberBackground">
+            <color red="0.19900000095367432" green="0.19900000095367432" blue="0.19900000095367432" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="groupTableViewBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
