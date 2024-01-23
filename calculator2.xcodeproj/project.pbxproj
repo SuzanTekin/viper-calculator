@@ -42,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FA4AEF6B2B60183000B3B83D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		FA4AEF6C2B6018B800B3B83D /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		FAD14F862B1A130600141B71 /* calculator2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = calculator2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAD14F892B1A130600141B71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAD14F8B2B1A130600141B71 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +105,8 @@
 		FAD14F7D2B1A130600141B71 = {
 			isa = PBXGroup;
 			children = (
+				FA4AEF6C2B6018B800B3B83D /* .gitignore */,
+				FA4AEF6B2B60183000B3B83D /* README.md */,
 				FAD14F882B1A130600141B71 /* calculator2 */,
 				FAD14F9F2B1A130800141B71 /* calculator2Tests */,
 				FAD14FA92B1A130800141B71 /* calculator2UITests */,
