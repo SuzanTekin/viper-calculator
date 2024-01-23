@@ -13,6 +13,33 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CalculatorViewController" customModule="calculator2" customModuleProvider="target">
             <connections>
+                <outlet property="buttonNumber0" destination="IQb-cd-oeb" id="YOp-YT-zTr"/>
+                <outlet property="buttonNumber1" destination="Rhw-j5-fyx" id="h5n-hp-oS2"/>
+                <outlet property="buttonNumber2" destination="YIT-vt-Ozl" id="dfa-87-4qs"/>
+                <outlet property="buttonNumber3" destination="qiV-hW-bU7" id="EQ8-ht-XAT"/>
+                <outlet property="buttonNumber4" destination="wPo-Ss-Smz" id="Jib-5G-tHY"/>
+                <outlet property="buttonNumber5" destination="0xX-jx-3fg" id="bcV-1c-o4v"/>
+                <outlet property="buttonNumber6" destination="2xy-5b-wz1" id="ve3-1k-65U"/>
+                <outlet property="buttonNumber7" destination="edH-OT-w5f" id="7Ws-64-e8d"/>
+                <outlet property="buttonNumber8" destination="S9i-Jp-MQ5" id="onS-TW-9RX"/>
+                <outlet property="buttonNumber9" destination="gD8-xv-6HZ" id="czD-j8-H0I"/>
+                <outlet property="clearButton" destination="tn5-Vz-CmF" id="TvL-yT-bcR"/>
+                <outlet property="descriptionText" destination="iBc-ir-tTU" id="4Rv-7F-NxI"/>
+                <outlet property="divideButton" destination="GLw-bz-Jzm" id="K36-HT-fjG"/>
+                <outlet property="dotButton" destination="ATS-Zd-pT9" id="dzS-Tz-1H5"/>
+                <outlet property="equalButton" destination="C8a-bp-k9M" id="Dky-GG-k4d"/>
+                <outlet property="factorialButton" destination="q2V-CI-WkU" id="Q77-Eg-9EA"/>
+                <outlet property="minusButton" destination="t8h-OW-vbk" id="CIx-RS-rI3"/>
+                <outlet property="modButton" destination="VPm-tH-ZTG" id="jZt-NA-5EJ"/>
+                <outlet property="multiplyButton" destination="0l1-eL-ZyP" id="X1y-7p-f3N"/>
+                <outlet property="pharantessCloseButton" destination="Z5H-by-7t1" id="fnT-tP-TKs"/>
+                <outlet property="pharantessOpenButton" destination="D9b-h1-b8q" id="JFH-xA-fTC"/>
+                <outlet property="piButton" destination="eID-6k-ILZ" id="oK9-Ky-goH"/>
+                <outlet property="plusButton" destination="g0D-ak-pkf" id="8v0-sO-Sns"/>
+                <outlet property="removeButton" destination="VNr-kH-fe6" id="aen-7h-qYH"/>
+                <outlet property="resultText" destination="4HD-2i-zXy" id="tiu-ci-UQb"/>
+                <outlet property="rootButton" destination="mec-uk-m2l" id="wRS-LS-efU"/>
+                <outlet property="roundButton" destination="yob-cT-Tvb" id="yDo-gP-Dn1"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -27,7 +54,7 @@
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="QYa-KT-rmx">
                             <rect key="frame" x="0.0" y="306" width="353" height="429"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iBc-ir-tTU">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iBc-ir-tTU">
                                     <rect key="frame" x="0.0" y="0.0" width="353" height="24"/>
                                     <constraints>
                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="24" id="sot-FA-Spk"/>
@@ -36,7 +63,7 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4HD-2i-zXy">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4HD-2i-zXy">
                                     <rect key="frame" x="0.0" y="36" width="353" height="28"/>
                                     <constraints>
                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="28" id="HiD-hA-6ye"/>
